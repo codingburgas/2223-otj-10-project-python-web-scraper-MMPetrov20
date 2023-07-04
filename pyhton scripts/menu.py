@@ -1,7 +1,7 @@
 """"
 1 PCs
-    gaming PC
-    mini PC
+    gaming PCs
+    all-in-One PCs
 2 PC periferals
     mouses
     keyboards
@@ -24,12 +24,12 @@ menu_options = ["PCs", "PC periferals", "Laptops", "Smartphones", "TVs"]
 
 # Second layer menu options
 menu_suboptions = [
-        ["gaming PC", "mini PC"], 
-        ["mouses", "keyboards", "monitors"],
-        ["gaming laptops", "portable laptops"],
-        ["Apple smartphones", "Samsung smartphones", "Xiaomi smartphones", "ASUS smartphones"],
-        ["Samsung TVs", "Sony TVs", "Philips TVs"]
-    ]
+    ["gaming PCs", "all-in-one PCs"], 
+    ["mouses", "keyboards", "monitors"],
+    ["gaming laptops", "portable laptops"],
+    ["apple smartphones", "samsung smartphones", "xiaomi smartphones", "asus smartphones"],
+    ["samsung TVs", "sony TVs", "philips TVs"]
+]
 
 # Display first menu layer
 def display_first_menu_layer():
