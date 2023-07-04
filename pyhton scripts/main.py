@@ -1,6 +1,6 @@
 from menu import select_category
 from url_modification import update_URL
-from scraper import collect_data
+from scraper import collect_data, print_data
 
 # Get the target product category
 target_category = select_category()
@@ -12,4 +12,4 @@ URL = update_URL(target_category)
 collected_data = collect_data(URL, target_category)
 
 # Print the collectted data
-print(collected_data)
+print_data(collected_data)

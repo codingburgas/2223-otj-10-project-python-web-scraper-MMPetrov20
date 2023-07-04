@@ -65,3 +65,16 @@ def collect_data(URL, selected_category):
 
     # Return the finished list of product packages
     return product_info
+
+# Print collected data
+def print_data(product_info):
+
+    # Iterate throught the product
+    for dictionary in product_info:
+
+        # Print data from the product packages
+        for key, value in dictionary.items():
+            print(f"{key}: {value}")
+            
+        # Print a blank line between the product packages
+        print()
