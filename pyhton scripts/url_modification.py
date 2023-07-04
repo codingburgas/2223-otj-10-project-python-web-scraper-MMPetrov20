@@ -6,11 +6,11 @@ def update_URL(str):
 
     # Modify the URL 
     match str:
-        case "gaming PC":
+        case "gaming PCs":
             path += "kompyutri/nastolni-kompyutri/za-igri-gaming"
 
-        case "mini PC":
-            path += "kompyutri/nastolni-kompyutri/mini-pc"
+        case "all-in-one PCs":
+            path += "kompyutri/nastolni-kompyutri/all-in-one"
 
         case "mouses":
             path += "periferiya/mishki"
@@ -27,25 +27,25 @@ def update_URL(str):
         case "portable laptops":
             path += "laptopi/laptopi/teglo-do-2"
 
-        case "Apple smartphones":
+        case "apple smartphones":
             path += "smartfoni/smartfoni/apple"
 
-        case "Samsung smartphones":
+        case "samsung smartphones":
             path += "smartfoni/smartfoni/samsung"
 
-        case "Xiaomi smartphones":
+        case "xiaomi smartphones":
             path += "smartfoni/smartfoni/xiaomi"
 
-        case "ASUS smartphones":
+        case "asus smartphones":
             path += "smartfoni/smartfoni/asus"
 
-        case "Samsung TVs":
+        case "samsung TVs":
             path += "televizori-i-publichni-displei/televizori/samsung"
 
-        case "Sony TVs":
+        case "sony TVs":
             path += "televizori-i-publichni-displei/televizori/sony"
 
-        case "Philips TVs":
+        case "philips TVs":
             path += "televizori-i-publichni-displei/televizori/philips"
 
     # Return the modified URL
