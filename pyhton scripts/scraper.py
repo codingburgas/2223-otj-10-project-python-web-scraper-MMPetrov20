@@ -18,3 +18,50 @@ specific_product_parameters = {
     'sony TVs' : ['Screen size', 'Matrix type', 'Resolution', 'Scan rate', 'Warranty period'],
     'philips TVs' : ['Screen size', 'Matrix type', 'Resolution', 'Scan rate', 'Warranty period']
 }
+
+# Web scraper
+def collect_data(URL, selected_category):
+    page = requests.get(URL)
+    page_content = BeautifulSoup(page.content, "html.parser")
+    products = page_content.find_all("div", class_="product")
+    product_info = []
+
+    # Iterate through the scraped products
+    for i in products:
+        # Build a list with the product's parameters
+        parameters = i.find("ul", class_="parameters")
+        
+        # Process the product's parameters
+        list_items = []
+        for li in parameters.find_all("li"):  
+            #  Cast the li(type: Any) to string
+            edited_li = str(li.text.strip())
+
+            # Check for and edit odd list items
+            if(edited_li.find(':') > 0):
+                edited_li = edited_li.split(':', 1)[1]
+                edited_li = edited_li[1:]
+
+            # Append the processed item to the list
+            list_items.append(edited_li)
+
+        # Check if a product has enough listed parameters
+        if(len(list_items) == len(specific_product_parameters[selected_category])):
+            # Get the product's listed name
+            product_name = i.find("div", class_="isTruncated").text.strip()
+
+            # Get the product's listed price
+            product_price = str(i.find("div", class_="prices").find("div", class_="price").find("span").text.strip())
+            product_price = product_price.replace("00", "") # Format out the extra zeros
+
+            # Build a dictionary from the product parameters and their values 
+            parameter_package = dict(zip(specific_product_parameters[selected_category], list_items))
+
+            # Join the dictionary of parameters with the product's name and price
+            product_package = {'Name': product_name, **parameter_package, 'Price' : product_price}
+
+            # Append the complete product package to the list
+            product_info.append(product_package)
+
+    # Return the finished list of product packages
+    return product_info

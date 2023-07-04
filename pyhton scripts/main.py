@@ -1,13 +1,15 @@
-import requests
-from bs4 import BeautifulSoup
 from menu import select_category
 from url_modification import update_URL
+from scraper import collect_data
 
-URL = update_URL(select_category())
+# Get the target product category
+target_category = select_category()
 
-# page = requests.get(URL)
+# Update the URL to point to the target product category
+URL = update_URL(target_category)
 
-# soup = BeautifulSoup(page.content, "html.parser")
-# results = soup.find(id="ResultsContainer")
+# Collect data from the URL
+collected_data = collect_data(URL, target_category)
 
-# print(results.prettify())
+# Print the collectted data
+print(collected_data)
