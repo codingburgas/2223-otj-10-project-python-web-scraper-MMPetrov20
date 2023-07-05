@@ -1,3 +1,4 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 from menu import select_category
@@ -14,6 +15,9 @@ def main():
     # Collect data from the URL
     page_data = []
     page_num = 1
+
+    # Clear the terminal
+    os.system("cls")
 
     while(True):
         # Collect date from a page

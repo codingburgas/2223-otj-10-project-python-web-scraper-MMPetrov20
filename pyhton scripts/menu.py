@@ -1,3 +1,5 @@
+import os
+
 """"
 1 PCs
     gaming PCs
@@ -19,6 +21,7 @@
     sony
     philips
 """
+
 # First layer menu options
 menu_options = ["PCs", "PC periferals", "Laptops", "Smartphones", "TVs"]
 
@@ -41,7 +44,10 @@ def display_first_menu_layer():
 
 # Display second menu layer
 def display_second_menu_layer(user_input):
-    
+
+    # Clear the terminal
+    os.system("cls")
+
     row_num = 1
     for y in menu_suboptions[user_input-1]:
         print(f'{row_num}. {y}')
