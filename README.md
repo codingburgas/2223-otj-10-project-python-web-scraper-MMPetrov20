@@ -5,6 +5,7 @@
 - [Project Structure](#projectStructure)
 - [Used Technologies](#technologies)
 - [Usage](#usage)
+- [Examples](#example)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
@@ -16,6 +17,7 @@ This project is a web scraper implemented in Python to collect data from an e-co
   <a href="https://github.com/"><img src="https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png" alt="GitHub logo" width=48px /></a>
   <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/color/344/visual-studio-code-2019.png" alt="VS code logo" width=48px /></a>
   <a href="https://www.python.org"><img src="https://img.freepik.com/free-icon/snakes_318-368381.jpg" alt="Python" width=48px /></a>
+</p>
 
 ## 🔩 Project Structure<a name="projectStructure"></a>
 > The project consists of the following files:
@@ -36,6 +38,15 @@ This project is a web scraper implemented in Python to collect data from an e-co
 - The scraper will collect data from the website and display it in a formatted manner.
 - Use the scroll to navigate through the pages.
 - Press Esc to exit the program.
+
+## Examples<a name="example"></a>
+*Quick preview of the scraper's output*
+
+<p align="left">
+  <img src="images/menu.png" width = 375px>
+  <img src="images/output1.png" width = 610px>
+  <img src="images/output2.png" width = 600px>
+</p>
 
 ## 📖 Author<a name="author"></a>
 *Everyone who has participated in the making of this project:*
