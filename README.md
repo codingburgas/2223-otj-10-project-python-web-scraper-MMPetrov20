@@ -20,14 +20,14 @@ This project is a web scraper implemented in Python to collect data from an e-co
 </p>
 
 ## 🔩 Project Structure<a name="projectStructure"></a>
-> The project consists of the following files:
+The project consists of the following files:
 
-- **main.py:** Contains the main function that orchestrates the scraping process.
+- `main.py` Contains the main function that orchestrates the scraping process.
   - It calls other modules to select the product category, update the URL, collect data, and print the collected data.
-- **menu.py:** Defines menu options and functions for displaying and selecting product categories.
-- **url_modification.py:** Contains functions to update the URL based on the selected product category and navigate to the next page.
-- **scraper.py:** Implements the web scraping functionality to collect data from the website.
-- **README.md:** This file, providing an overview of the project.
+- `menu.py` Defines menu options and functions for displaying and selecting product categories.
+- `url_modification.py` Contains functions to update the URL based on the selected product category and navigate to the next page.
+- `scraper.py` Implements the web scraping functionality to collect data from the website.
+- `README.md` This file, providing an overview of the project.
 
 ## 🖥️ Usage<a name="usage"></a>
 - Make sure you have `Python` installed on your system.
