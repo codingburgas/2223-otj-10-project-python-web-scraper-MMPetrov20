@@ -98,12 +98,26 @@ def collect_data(URL, selected_category, page_num):
 # Print collected data
 def print_data(page_data, page_num):
 
-    # Iterate throught the product
+    # Generate top border
+    max_page = get_top_page_num()
+    border_len = 55 - len(str(page_num)) - len(str(max_page))
+    border = "-" * border_len
+
+    # Add a blank line before each product package
+    print()
+
+    # Print top border along with page number
+    print(f'Page: {page_num}/{max_page} {border}')
+
+    # Iterate throught the products
     for dictionary in page_data:
 
         # Print data from the product packages
         for key, value in dictionary.items():
             print(f"{key}: {value}")
-            
+    
         # Print a blank line between the product packages
         print()
+
+    # Print bottom border
+    print("-" * 63)
