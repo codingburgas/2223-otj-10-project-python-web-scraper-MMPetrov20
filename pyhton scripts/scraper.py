@@ -19,8 +19,30 @@ specific_product_parameters = {
     'philips TVs' : ['Screen size', 'Matrix type', 'Resolution', 'Scan rate', 'Warranty period']
 }
 
+# Define page variables
+page = None
+page_content = None
+   
+# Get the top page number
+def get_top_page_num():
+    page_numbing = page_content.find("ul", class_="pagination")
+    numbers = []
+
+    if page_numbing != None:
+        for li in page_numbing.find_all("li", class_="number"):  
+            #  Cast the li(type: Any) to int
+            edited_li = int(li.text.strip())
+
+            # Append the processed item to the list
+            numbers.append(edited_li)
+    else:
+        return 1
+
+    return max(numbers)
+    
 # Web scraper
-def collect_data(URL, selected_category):
+def collect_data(URL, selected_category, page_num):
+    global page, page_content
     page = requests.get(URL)
     page_content = BeautifulSoup(page.content, "html.parser")
     products = page_content.find_all("div", class_="product")
